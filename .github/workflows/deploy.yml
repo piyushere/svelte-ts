@@ -14,6 +14,9 @@ concurrency:
     group: 'pages'
     cancel-in-progress: false
 
+env:
+    BUILD_GITHUB_PAGES: true
+
 jobs:
     build:
         runs-on: ubuntu-latest
