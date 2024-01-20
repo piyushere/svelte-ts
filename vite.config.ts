@@ -6,6 +6,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [svelte(), viteCompression(), tsconfigPaths()],
+    base: process.env.GITHUB_PAGES ? 'svelte-ts' : undefined,
     server: {
         proxy: {
             '/api': {
