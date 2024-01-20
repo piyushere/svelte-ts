@@ -49,9 +49,9 @@ jobs:
                       ${{ runner.os }}-pnpm-store-
 
             - name: Install dependencies
-              run: pnpm install
+              run: pnpm i
             - name: Build project
-              run: pnpm build-gh-pages
+              run: pnpm build
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v2
               with:
