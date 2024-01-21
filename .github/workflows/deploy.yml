@@ -42,7 +42,7 @@ jobs:
 
             - name: Build project
               env:
-                  BASE_PATH: '/${{ github.event.repository.name }}'
+                  BASE_PATH: '${{ github.event.repository.name }}'
               run: pnpm build
 
             - name: Upload artifacts
