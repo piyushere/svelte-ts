@@ -8,6 +8,7 @@ export default defineConfig({
     plugins: [svelte(), viteCompression(), tsconfigPaths()],
     base: `/${process.env.BASE_PATH || ''}`,
     server: {
+        port: 3000,
         proxy: {
             '/api': {
                 target: 'http://localhost:8000',
