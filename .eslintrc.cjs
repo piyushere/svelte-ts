@@ -28,6 +28,9 @@ module.exports = {
             parserOptions: {
                 parser: '@typescript-eslint/parser',
             },
+            rules: {
+                '@typescript-eslint/no-unused-vars': 'off',
+            },
         },
     ],
     parser: '@typescript-eslint/parser',
@@ -46,6 +49,16 @@ module.exports = {
         'no-use-before-define': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-shadow': 'off',
+        'import/no-mutable-exports': 'off',
+        'import/extensions': [
+            'error',
+            'ignorePackages',
+            {
+                js: 'never',
+                ts: 'never',
+                svelte: 'never',
+            },
+        ],
     },
     settings: {
         'import/resolver': {
