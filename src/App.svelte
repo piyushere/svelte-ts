@@ -1,5 +1,4 @@
 <script lang="ts">
-    // eslint-disable-next-line import/no-unresolved, import/no-absolute-path
     import viteLogo from '/vite.svg';
     import svelteLogo from './assets/svelte.svg';
     import Counter from 'src/lib/Counter.svelte';
