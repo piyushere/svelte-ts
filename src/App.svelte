@@ -48,4 +48,17 @@
     .read-the-docs {
         color: #888;
     }
+
+    a:hover {
+        color: #535bf2;
+    }
+
+    h1 {
+        font-size: 3.2em;
+        line-height: 1.1;
+    }
+
+    .card {
+        padding: 2em;
+    }
 </style>
