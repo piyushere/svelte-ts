@@ -4,6 +4,7 @@ import tsEslint from 'typescript-eslint';
 import pluginSvelte from 'eslint-plugin-svelte';
 import parserSvelte from 'svelte-eslint-parser';
 import globals from 'globals';
+import svelteConfig from './svelte.config.js';
 
 const config = [
     // eslint:recommended
@@ -13,7 +14,7 @@ const config = [
     // this enables both: eslint-config-prettier and eslint-plugin-prettier
     eslintPluginPrettierRecommended,
     // this disables prettier's conflicting rules with svelte
-    ...pluginSvelte.configs['flat/prettier'],
+    ...pluginSvelte.configs.prettier,
     {
         files: ['**/*.svelte'],
         languageOptions: {
@@ -22,6 +23,7 @@ const config = [
             parserOptions: {
                 // typescript support in the <script> tag
                 parser: tsEslint.parser,
+                svelteConfig,
             },
             // browser globals like window and document
             globals: {
